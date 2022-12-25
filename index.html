@@ -454,13 +454,17 @@
                     <label class="form-field-label" for="user-comment">Коментар</label>
                     <textarea
                         class="form-field-textarea" 
-                        name="user-comment" 
                         id="user-comment" 
-                        placeholder="Введіть текст" >
+                        name="user-comment" 
+                        placeholder="Введіть текст">
                     </textarea>
+
                     <div class="form-field-checkbox">
                         <input id="terms-checkbox" type="checkbox" name="terms-checkbox">
-                        <label for="terms-checkbox">Погоджуюся з розсилкою та приймаю  <a href="#">Умови договору</a></label>
+                        <label for="terms-checkbox">
+                            <span class="policy">Погоджуюся з розсилкою та приймаю  
+                            <a class="policy-link" href="#">Умови договору</a></span>
+                        </label>
                     </div>
                     <button class="form-submit" type="submit">Відправити</button>
                 </form>

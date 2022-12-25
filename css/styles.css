@@ -782,7 +782,7 @@ h6 {
     font-size: 20px;
     line-height: 1.15;
     text-align: center;
-
+    margin-bottom: 12px;
 
     color:var(--primary-text-color);
 }
@@ -803,11 +803,20 @@ h6 {
     border-radius: 50%;
     background-color: var(--white-color);
     border: 1px solid var(--close-button-order);
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close:hover {
+    fill: var(--accent-color);
 }
 
 .form-field-label {
-    color: var(--second-text-color);
     margin-bottom: 4px;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
 }
 
 .form-field-input {
@@ -817,6 +826,9 @@ h6 {
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     outline: none;
+    transition-property: border-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-field-textarea {
@@ -847,6 +859,17 @@ h6 {
     letter-spacing: 0.01em;
     color: rgba(117, 117, 117, 0.5);
 
+}
+
+.policy {
+ 
+    font-size: 14px;
+    line-height: 1.71;
+}
+
+.policy-link {
+    color: var(--accent-color);
+    text-decoration: underline;
 }
 
 .form-field{
