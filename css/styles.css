@@ -15,6 +15,8 @@
     --backdrop-background-color: rgba(0, 0, 0, 0.2);
     --close-button-order:rgba(0, 0, 0, 0.1);
     --footer-form-email:rgba(255, 255, 255, 0.6);
+
+    --anime: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .body {
@@ -806,6 +808,7 @@ h6 {
     transition-property: fill;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
 }
 
 .modal-close:hover {
@@ -829,6 +832,7 @@ h6 {
     transition-property: border-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
 }
 
 .form-field-textarea {
@@ -839,17 +843,24 @@ h6 {
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     outline: none;
+    cursor: pointer;
+    transition-property: border-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-field-input:focus  {
+.form-field-input:hover,
+.form-field-input:hover+ .form-field-icon {
     border-color: var(--accent-color);
-}
+    fill: var(--accent-color);
 
+}
+.form-field-textarea:hover,
 .form-field-textarea:focus  {
     border-color: var(--accent-color);
 }
 
-.form-field-input:focus + .form-field-icon  {
+.form-field-input:hover + .form-field-icon  {
     fill: var(--accent-color);
 }
 
@@ -858,19 +869,9 @@ h6 {
     line-height: 1.16;
     letter-spacing: 0.01em;
     color: rgba(117, 117, 117, 0.5);
-
+    
 }
 
-.policy {
- 
-    font-size: 14px;
-    line-height: 1.71;
-}
-
-.policy-link {
-    color: var(--accent-color);
-    text-decoration: underline;
-}
 
 .form-field{
     position: relative;
@@ -881,8 +882,10 @@ h6 {
     position: absolute;
     top: 50%;
     left: 12px;
-    transform: translateY(-50%)
+    transform: translateY(-50%);
+    transition: color var(--anime), fill var(--anime), border var(--anime);
 }
+
 
 .form-submit {
     width: 200px;
@@ -911,11 +914,42 @@ h6 {
     background-color: var(--button-active-blue);
 }
 
-.form-field-checkbox {
+.form-field-check {
     margin-bottom: 30px;
+    text-align: center;
 }
 
+.check {
+    appearance: none;
+}
 
+.icon-check {
+    margin-right: 8px;
+    vertical-align: middle;
+    border: 2px solid var(--primary-text-color);
+    border-radius: 2px;
+    fill: transparent;
+    transition: color var(--anime), fill var(--anime), border var(--anime) ;
+    cursor: pointer;
+}
+
+.check:checked+.icon-check {
+    fill: var(--white-color);
+    background-color:var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.form-field-agreement {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 1.71;
+    color: var(--second-text-color);
+}
+
+.terms-agreement {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
 
 /*  Форма в футере  */
 

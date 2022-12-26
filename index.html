@@ -456,16 +456,19 @@
                         class="form-field-textarea" 
                         id="user-comment" 
                         name="user-comment" 
-                        placeholder="Введіть текст">
-                    </textarea>
-
-                    <div class="form-field-checkbox">
-                        <input id="terms-checkbox" type="checkbox" name="terms-checkbox">
-                        <label for="terms-checkbox">
-                            <span class="policy">Погоджуюся з розсилкою та приймаю  
-                            <a class="policy-link" href="#">Умови договору</a></span>
+                        placeholder="Введіть текст"
+                    ></textarea>
+                    
+                    <div class="form-field-check">
+                        <label class="form-field-agreement" for="user-agreement">
+                            <input class="check" type="checkbox" name="user-agreement" id="user-agreement">
+                            <svg class="icon-check" width="16" height="15">
+                                <use href="./images/icons.svg#icon-Vector"></use>
+                            </svg>
+                            Погоджуюся з розсилкою та приймаю <a class="terms-agreement" href="#">Умови договору</a>
                         </label>
                     </div>
+                   
                     <button class="form-submit" type="submit">Відправити</button>
                 </form>
             </div>
