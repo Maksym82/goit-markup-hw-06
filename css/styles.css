@@ -967,13 +967,15 @@ h6 {
 
 /*  Форма в футере  */
 
-.footer-form-container {
-    display: flex;
+.footer-form {
     margin-left: 93px;
 }
 
+.footer-form-container {
+    display: flex;
+}
+
 .footer-form-title {
-    margin-left: 93px;
     color: var(--white-color);
     font-weight: 700;
     font-size: 14px;
